@@ -1,0 +1,12 @@
+version: '3'
+
+# volumes:
+
+include:
+  - ./docker/includes/db.include.yaml
+
+services:
+  app:
+    build: ./docker/go/Dockerfile_dev
+    volumes:
+      - ./:/app
